@@ -28,6 +28,7 @@ jobs:
 
       - name: Prebuild and Build Android Release APK
         run: |
+          npm install --save-dev ajv@^8.12.0
           npx expo prebuild --platform android --clean
           cd android
           chmod +x gradlew
